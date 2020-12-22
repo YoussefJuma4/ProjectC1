@@ -1,0 +1,35 @@
+
+
+<div class ="d-flex flex-row bd-highlight mb-3">
+
+    <div class = "form-froup row">
+    
+        
+        <label class = "col-sm-2 col-form-label">Locatie</label>
+    <div class="col-sm-10"> 
+        <input type ="text" class="form-control"[(ngModel)] = "Locatie"
+            placeholder="Locatie">
+            </div>
+    
+            <label class = "col-sm-2 col-form-label">Capaciteit</label>
+            <div class="col-sm-10"> 
+                <input type ="text" class="form-control"[(ngModel)] = "Capaciteit"
+                    placeholder="Caoaciteit">
+                    </div>
+    
+                        </div>
+    
+    
+    
+    
+    </div>
+    
+    
+    <button (click)="addRuimte()" *ngIf="ruim.id == 0" class="btn btn-primary">
+        Ruimte Toevoegen
+    </button>
+    
+    <button (click)="updateRuimte()" *ngIf="ruim.id != 0" class="btn btn-primary">
+        Ruimte Wijzegen
+    </button>
+    

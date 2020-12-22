@@ -1,0 +1,45 @@
+
+
+<div class ="d-flex flex-row bd-highlight mb-3">
+
+<div class = "form-froup row">
+
+    
+    <label class = "col-sm-2 col-form-label">Voornaam</label>
+<div class="col-sm-10"> 
+    <input type ="text" class="form-control"[(ngModel)] = "Voornaam"
+        placeholder="Voornaam">
+        </div>
+
+        <label class = "col-sm-2 col-form-label">Achternaam</label>
+        <div class="col-sm-10"> 
+            <input type ="text" class="form-control"[(ngModel)] = "Achternaam"
+                placeholder="Achternaam">
+                </div>
+
+                <label class = "col-sm-2 col-form-label">Emailadres</label>
+                <div class="col-sm-10"> 
+                    <input type ="text" class="form-control"[(ngModel)] = "Email"
+                        placeholder="exampel@gebruiker.nl">
+                        </div>
+
+                        <label class = "col-sm-2 col-form-label">Wachtwoord</label>
+                        <div class="col-sm-10"> 
+                            <input type ="text" class="form-control"[(ngModel)] = "Wachtwoord"
+                                placeholder="exampel@gebruiker.nl">
+                                </div>
+                    </div>
+
+
+
+
+</div>
+
+
+<button (click)="addGebruiker()" *ngIf="geb.id == 0" class="btn btn-primary">
+    Gebruiker Toevoegen
+</button>
+
+<button (click)="updateGebruiker()" *ngIf="geb.id != 0" class="btn btn-primary">
+    Gebruiker Wijzegen
+</button>
