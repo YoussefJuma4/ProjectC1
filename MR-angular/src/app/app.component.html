@@ -4,13 +4,14 @@
   <h3 class="d-flex justify-content-center">MR </h3>
   <h5 class="d-flex justify-content-center">MReserverenapp</h5>
 
-  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark" *ngIf="this.Auth.isAuthorized">
   <ul class="navbar-nav">
+    <!--
     <li class="nav-item">
       <button routerLink="inlogen"
-      class="m-1 btn btn-light btn-outline-primary" Button>Inlogen</button>
+      class="m-1 btn btn-light btn-outline-primary" Button>Inloggen</button>
   </li>
-
+  -->
   <li class="nav-item">
     <button routerLink="profile"
     class="m-1 btn btn-light btn-outline-primary" Button>Profile</button>
@@ -22,18 +23,18 @@
 </li>
 
       <li class="nav-item">
-          <button routerLink="gebruikers"
+          <button *ngIf="this.Auth.isAdmin" routerLink="gebruikers"
           class="m-1 btn btn-light btn-outline-primary" Button>Gebruikersbeheer</button>
       </li>
 
       <li class="nav-item">
-          <button routerLink="ruimte"
+          <button *ngIf="this.Auth.isAdmin" routerLink="ruimte"
           class="m-1 btn btn-light btn-outline-primary" Button>RuimteBeheer</button>
       </li>
 
       <li class="nav-item">
-        <button routerLink="reseverenbeheer"
-        class="m-1 btn btn-light btn-outline-primary" Button>Reseverenbeheer</button>
+        <button *ngIf="this.Auth.isAdmin" routerLink="reseverenbeheer"
+        class="m-1 btn btn-light btn-outline-primary" Button >Reseverenbeheer</button>
     </li>
   </ul>
   </nav>

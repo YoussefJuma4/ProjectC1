@@ -9,7 +9,12 @@ export class SharedService {
   readonly APIUrl = 'https://localhost:44309/api';
 
   constructor(private http:HttpClient) { }
+
+  //Login 
+
+  
   // Gebruikers Connecties
+
   getGebList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/Gebruikers');
   }
@@ -53,6 +58,4 @@ deleteReserveren(val:any){
   return this.http.delete(this.APIUrl+'/Reserveren/'+ val);
 }
 
-  
-  
 }
