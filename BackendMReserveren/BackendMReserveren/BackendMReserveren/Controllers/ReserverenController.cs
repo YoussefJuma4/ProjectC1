@@ -16,7 +16,7 @@ namespace BackendMReserveren.Controllers
 
         public HttpResponseMessage Get()
         {
-            string query = @" select ReserverenId,(convert(varchar(10),Datum,120)) as ResInfo, REVERSE(ResInfo) as Datum,GebruikerId,convert(varchar(10),Tijd,120) as Tijd,RuimteId from dbo.Reserveren ";
+            string query = @" select ReserverenId,(convert(varchar(10),Datum,120)) as Datum, convert(varchar(10),Tijd,120) as Tijd,RuimteId from dbo.Reserveren ";
             DataTable table = new DataTable();
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["MReserverenDB"].ConnectionString))
             using (var cmd = new SqlCommand(query, con))
