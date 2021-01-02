@@ -50,9 +50,6 @@ export class ShowGebruikersComponent implements OnInit {
     }
   }
 
-
-
-
   closeClick(){
     this.ActivateAddEditGebComp=false;
     this.refreshGebList();

@@ -1,1 +1,27 @@
-<p>profile works!</p>
+
+<button type="submit" class="btn btn-primary" (click)="Logout()">Uitloggen</button>
+<br>
+<table>
+    <!--
+    <thead>
+        <th>ID</th>
+        <th>VOORNAAM</th>
+        <th>ACHTERNAAM</th>
+        <th>EMAIL</th>
+        <th>WACHTWOORD</th>
+    </thead>
+    -->
+    <tbody>
+        <tr *ngFor = "let item of getItems(userCompleteInfo)">
+            <td>{{item.GebruikerId}}</td>
+            <td>{{item.Voornaam}}</td>
+            <td>{{item.Achternaam}}</td>
+            <td>{{item.Email}}</td>
+            <td>{{item.Wachtwoord}}</td>
+            </tr>
+        </tbody>    
+</table>
+<div *ngFor = "let item of getItems(userCompleteInfo)"></div>
+<div>hallo {{voornaam}} {{achternaam}}</div>
+
+
