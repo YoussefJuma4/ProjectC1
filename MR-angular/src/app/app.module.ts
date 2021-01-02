@@ -17,6 +17,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { InlogenComponent } from './inlogen/inlogen.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ReserverenComponent } from './reserveren/reserveren.component';
+import { ShowReserverenComponent } from './show-reserveren/show-reserveren.component';
+import { AddReserverenComponent } from './add-reserveren/add-reserveren.component';
 
 
 
@@ -32,14 +34,17 @@ import { ReserverenComponent } from './reserveren/reserveren.component';
     MainNavComponent,
     InlogenComponent,
     ProfileComponent,
-    ReserverenComponent
+    ReserverenComponent,
+    ShowReserverenComponent,
+    AddReserverenComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
     
 
   ],
